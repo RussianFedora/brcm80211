@@ -23,7 +23,7 @@ BuildRequires:	%{_bindir}/kmodtool
 Requires:	kernel = %{version}
 
 # needed for plague to make sure it builds for i586 and i686
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  %{ix86} x86_64
 # ppc disabled because broadcom only provides x86 and x86_64 bits
 
 %{!?kernels:BuildRequires: buildsys-build-rpmfusion-kerneldevpkgs-%{?buildforkernels:%{buildforkernels}}%{!?buildforkernels:current}-%{_target_cpu} }
