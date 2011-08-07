@@ -6,7 +6,7 @@
 #define buildforkernels newest
 
 Name:		brcm80211
-Version:	2.6.40
+Version:	2.6.40.1
 Release:	1%{?dist}
 Summary:	Kernel module for broadcom wireless devices
 Group:		System Environment/Kernel
@@ -99,6 +99,9 @@ chmod 0755 $RPM_BUILD_ROOT/%{kmodinstdir_prefix}/*/%{kmodinstdir_postfix}/* || :
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Sun Aug  7 2011 Alexei Panov <elemc AT atisserv DOT ru> - 2.6.40.1-1
+- Update to 2.6.40.1 (Fedora kernel)
+
 * Sun Aug  7 2011 Alexei Panov <elemc AT atisserv DOT ru> - 2.6.40-1
 - Initial build
 
