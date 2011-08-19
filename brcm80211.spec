@@ -6,7 +6,7 @@
 #define buildforkernels newest
 
 Name:		brcm80211
-Version:	2.6.40.1
+Version:	2.6.40.3
 Release:	1%{?dist}
 Summary:	Kernel module for broadcom wireless devices
 Group:		System Environment/Kernel
@@ -20,7 +20,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Patch1:		%{name}-includes.patch
 
 BuildRequires:	%{_bindir}/kmodtool
-Requires:	kernel = %{version}
+Requires:	kernel >= %{version}
 
 # needed for plague to make sure it builds for i586 and i686
 ExclusiveArch:  %{ix86} x86_64
@@ -99,6 +99,9 @@ chmod 0755 $RPM_BUILD_ROOT/%{kmodinstdir_prefix}/*/%{kmodinstdir_postfix}/* || :
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Fri Aug 19 2011 Alexei Panov <elemc AT atisserv DOT ru> - 2.6.40.3-1
+- Update to 2.6.40.3 (Fedora kernel)
+
 * Sun Aug  7 2011 Alexei Panov <elemc AT atisserv DOT ru> - 2.6.40.1-1
 - Update to 2.6.40.1 (Fedora kernel)
 
